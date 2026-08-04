@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サポート｜血液検査手帳</title>
+<meta name="description" content="iOSアプリ「血液検査手帳」のサポートページ。使い方、よくある質問、お問い合わせ先をご案内します。">
+<style>
+  :root{
+    --ink:#0f2a33;
+    --ink-soft:#3d5761;
+    --paper:#f5f1e6;
+    --band:#c9e3d3;
+    --band-line:#3fa57a;
+    --rule:#dcd6c6;
+    --high:#e5544b;
+    --low:#4a9be8;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+    font-size:14.5px;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:44rem;margin:0 auto;padding:0 1.5rem 5rem}
+
+  header{
+    padding:3.5rem 0 2rem;
+    background-image:repeating-linear-gradient(
+      to bottom, transparent, transparent 2.5rem,
+      var(--rule) 2.5rem, var(--rule) calc(2.5rem + 1px));
+    background-position:0 1.2rem;
+  }
+  .eyebrow{
+    font-size:.8rem;letter-spacing:.14em;color:var(--band-line);
+    font-weight:700;margin:0 0 .4rem;
+  }
+  h1{
+    font-size:1.6rem;font-weight:700;line-height:1.5;margin:0;
+  }
+  .tagline{margin:1.1rem 0 0;color:var(--ink-soft);font-size:.9rem}
+
+  h2{
+    font-size:1rem;font-weight:700;margin:3rem 0 1.2rem;
+    position:relative;display:inline-block;padding:0 .15em .1em;
+  }
+  h2::after{
+    content:"";position:absolute;left:0;right:0;bottom:.05em;height:.62em;
+    background:var(--band);z-index:-1;border-radius:2px;
+  }
+  h3{font-size:.94rem;font-weight:700;margin:1.9rem 0 .5rem}
+  h3::before{content:"Q ";color:var(--band-line);font-weight:600}
+  p{margin:0 0 1.1rem}
+  ul,ol{margin:0 0 1.1rem;padding-left:1.3rem}
+  li{margin-bottom:.5rem}
+
+  .card{
+    background:#fff;border-radius:4px;padding:1.35rem 1.5rem;margin:0 0 1rem;
+    border-left:4px solid var(--band-line);
+  }
+  .card p:last-child{margin-bottom:0}
+  .contact{font-size:.97rem}
+  .fill{background:#fdf3c9;padding:0 .2em;border-radius:2px}
+
+  .legend{display:flex;gap:1.4rem;flex-wrap:wrap;margin:0 0 1.1rem;padding:0;list-style:none}
+  .legend li{display:flex;align-items:center;gap:.45rem;margin:0;font-size:.92rem}
+  .swatch{width:.85rem;height:.85rem;border-radius:50%;display:inline-block;flex:none}
+  .sw-high{background:var(--high)}
+  .sw-low{background:var(--low)}
+  .sw-ok{background:var(--band-line)}
+
+  strong{font-weight:700}
+  a{color:var(--band-line)}
+  footer{
+    margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--rule);
+    font-size:.8rem;color:var(--ink-soft);
+  }
+  footer a{margin-right:1.2rem}
+  @media (max-width:480px){
+    body{font-size:14px}
+    h1{font-size:1.45rem}
+    header{padding-top:2.5rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">血液検査手帳</p>
+    <h1>サポート</h1>
+    <p class="tagline">健康診断や通院で受け取った血液検査の結果を、自分の手元で記録・整理するためのアプリです。</p>
+  </header>
+
+  <h2>お問い合わせ</h2>
+  <div class="card contact">
+    <p>不具合のご報告、ご要望、その他のお問い合わせは、次のアドレスまでお送りください。</p>
+    <p><a href="mailto:yilab.support@gmail.com">yilab.support@gmail.com</a></p>
+    <p style="font-size:.88rem;color:var(--ink-soft)">お使いのiPhoneの機種とiOSのバージョン、どの画面で何をしたときに起きたかを添えていただけると、原因の特定が早くなります。</p>
+  </div>
+
+  <h2>使い方</h2>
+  <ol>
+    <li><strong>記録を追加する</strong>：画面右上の「＋」を押すと、検査日と全項目の数値をまとめて入力できます。空欄のままでも保存できます。</li>
+    <li><strong>数値を直す</strong>：一覧表の数値をタップすると、その値だけを修正・削除できます。</li>
+    <li><strong>検査日を直す</strong>：一覧表の日付をタップすると、日付の変更やその日の記録の削除ができます。</li>
+    <li><strong>項目を調べる</strong>：一覧表の項目名をタップすると、その項目が何を見るものかの説明が表示されます。</li>
+    <li><strong>推移を見る</strong>：画面右上のグラフのボタンから、全項目の推移を一覧で確認できます。さらにタップすると、その項目の詳しいグラフが開きます。</li>
+  </ol>
+
+  <h2>よくある質問</h2>
+
+  <h3>数値の色は何を表していますか</h3>
+  <ul class="legend">
+    <li><span class="swatch sw-high"></span>基準値より高い</li>
+    <li><span class="swatch sw-ok"></span>基準値の範囲内</li>
+    <li><span class="swatch sw-low"></span>基準値より低い</li>
+  </ul>
+  <p>設定されている基準値と入力した数値を単純に比べて色を変えているだけのものです。健康状態を判定しているわけではありません。範囲内でも注意が必要な場合、範囲外でも問題のない場合があります。判断は医療機関にご相談ください。</p>
+
+  <h3>基準値を自分の検査結果表に合わせたい</h3>
+  <p>できます。設定画面で項目名をタップすると、基準値の下限・上限と、表に表示する文字を変更できます。基準値は検査機関や測定方法によって異なるため、お手元の検査結果表の値に合わせてお使いいただくのがおすすめです。</p>
+
+  <h3>使わない項目を消したい／項目を増やしたい</h3>
+  <p>設定画面の検査項目の左にあるチェックを外すと、その項目は一覧と入力画面に表示されなくなります（記録は消えません）。項目そのものを増やしたい場合は「項目を追加」から作成できます。</p>
+
+  <h3>家族の分もまとめて管理できますか</h3>
+  <p>1〜4人分を切り替えて記録できます。画面上部の人型のボタンで切り替え、隣の欄に名前を入れられます。表示する検査項目は人ごとに変えられるので、必要な項目だけを表示させておくことができます。基準値と項目名は4人で共通です。</p>
+
+  <h3>ペットの検査結果に使えますか</h3>
+  <p>記録することはできますが、最初から入っている基準値と項目の説明は<strong>すべて人間を対象としたもの</strong>です。動物の基準値は種類・年齢・体格によって大きく異なるため、そのままでは目安になりません。かかりつけの動物病院で示された基準値をご自身で設定のうえ、判断は獣医師にご相談ください。</p>
+
+  <h3>データはどこに保存されますか</h3>
+  <p>入力したデータは、お使いの端末の中だけに保存されます。外部に送信されることはありません。そのため、端末の紛失・故障・初期化、アプリの削除によってデータは失われます。定期的にバックアップを書き出しておくことをおすすめします。</p>
+
+  <h3>バックアップの取り方・戻し方</h3>
+  <p>設定画面の「データの書き出し・復元」から操作します。</p>
+  <ul>
+    <li><strong>バックアップを書き出す</strong>：保存先を選ぶ画面が開きます。「ファイルに保存」を選ぶと、ファイルアプリやiCloud Driveに置けます。メールやAirDropで自分に送っておく方法もあります。</li>
+    <li><strong>バックアップから復元</strong>：書き出したファイルを選ぶと、その時点の状態に戻せます。復元すると、今アプリに入っているデータは<strong>すべて置き換わります</strong>のでご注意ください。</li>
+    <li><strong>CSVで書き出す</strong>：表計算ソフトで開いたり、印刷して持参したりする用です。こちらのファイルからは復元できません。</li>
+  </ul>
+
+  <h3>機種を変えたらデータは移りますか</h3>
+  <p>自動では移りません。<strong>機種変更の前に、設定画面からバックアップを書き出してiCloud Driveなどに保存しておいてください。</strong>新しい端末でアプリを入れたあと、「バックアップから復元」でそのファイルを選べば元に戻せます。</p>
+
+  <h3>画面を暗くしたい</h3>
+  <p>画面上部の月のマーク（ダークモード時は太陽のマーク）を押すと、明るい表示と暗い表示を切り替えられます。初回は端末の設定に従います。</p>
+
+  <h3>入力した数値が表に出てこない</h3>
+  <p>その項目が非表示になっている可能性があります。設定画面で、選択中の人のチェックが入っているかご確認ください。また、記録は人ごとに分かれているため、画面上部で選んでいる人が入力時と同じかどうかもご確認ください。</p>
+
+  <h2>ご利用にあたって</h2>
+  <div class="card">
+    <p>本アプリは検査結果を記録・整理するための手帳です。医療機器ではなく、病気の診断・治療・予防を目的としたものではありません。表示される数値、色分け、グラフ、項目の説明は、医師による診断や指導に代わるものではありません。</p>
+    <p>体調に不安がある場合や、検査結果について疑問がある場合は、速やかに医療機関（動物の場合は動物病院）にご相談ください。免責事項の全文は、アプリ内の設定画面からご確認いただけます。</p>
+  </div>
+
+  <footer>
+    <a href="./support.html">サポート</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
+  </footer>
+
+</div>
+</body>
+</html>
