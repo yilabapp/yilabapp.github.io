@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サポート | あるく日本一周</title>
+<style>
+  :root {
+    --bg: #F7F7F3;
+    --card: #FFFFFF;
+    --ink: #1C2B24;
+    --ink-soft: #4B5A53;
+    --line: #E3E4DC;
+    --route-orange: #F2994A;
+    --route-red: #D6503F;
+    --route-green: #3C8558;
+    --route-blue: #3B6EA5;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+                 "Yu Gothic", "Noto Sans JP", Roboto, Arial, sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .routebar {
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg,
+      var(--route-orange) 0%, var(--route-orange) 25%,
+      var(--route-red) 25%, var(--route-red) 50%,
+      var(--route-green) 50%, var(--route-green) 75%,
+      var(--route-blue) 75%, var(--route-blue) 100%);
+  }
+
+  header {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 28px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--route-orange);
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--route-orange);
+  }
+
+  h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+
+  .lead {
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin: 0;
+    max-width: 46em;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  section {
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 12px;
+  }
+
+  .card h3 {
+    font-size: 15.5px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+
+  .card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+  }
+
+  .card p + p {
+    margin-top: 8px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+
+  .tag.orange { background: color-mix(in srgb, var(--route-orange) 16%, white); color: #9a5417; }
+  .tag.red    { background: color-mix(in srgb, var(--route-red) 14%, white);    color: #a33324; }
+  .tag.green  { background: color-mix(in srgb, var(--route-green) 14%, white);  color: #285f3d; }
+  .tag.blue   { background: color-mix(in srgb, var(--route-blue) 14%, white);   color: #2a4f77; }
+
+  .contact-box {
+    background: var(--ink);
+    color: #F7F7F3;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .contact-box p {
+    margin: 0 0 14px;
+    color: #C9D1CB;
+    font-size: 14.5px;
+  }
+
+  .contact-box a.mail {
+    display: inline-block;
+    background: var(--route-orange);
+    color: #201206;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+  }
+
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  footer a {
+    color: var(--ink-soft);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  footer nav {
+    display: flex;
+    gap: 18px;
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 27px; }
+    header { padding: 40px 20px 22px; }
+    main { padding: 0 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="routebar" aria-hidden="true"></div>
+
+<header>
+  <p class="eyebrow">Support</p>
+  <h1>あるく日本一周<br>サポートページ</h1>
+  <p class="lead">
+    歩数で日本地図を進み、観光地を巡りながら日本一周気分を楽しむウォーキングアプリです。
+    よくあるご質問と、お問い合わせ方法をまとめています。
+  </p>
+</header>
+
+<main>
+
+  <section>
+    <h2>よくあるご質問</h2>
+
+    <div class="card">
+      <span class="tag orange">歩数</span>
+      <h3>今日の歩数がすぐに反映されません</h3>
+      <p>
+        歩数はヘルスケア(Apple Health)のデータをもとに表示しています。iPhone内蔵センサーによる歩数計測は、
+        バッテリー節約のためリアルタイムではなく数分〜十数分おきにまとめて記録されることがあります。
+      </p>
+      <p>
+        Apple Watchをお使いの場合、歩数はヘルスケアを通じて自動的に反映されますが、
+        Watch側からiPhoneへの同期にも多少のタイムラグが生じることがあります。
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag red">ルート</span>
+      <h3>ルートが実際の道と違う・遠回りに見えます</h3>
+      <p>
+        観光地を巡る順番や道順は、座標をもとにアプリが自動で算出しています。そのため、実際には
+        現実的でない経路や、多少遠回りに見える経路が表示される場合があります。実際の道路状況の
+        変化により、表示ルートが最新の状況と異なることもあります。
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag blue">海路</span>
+      <h3>離島や北海道・沖縄への区間が直線になっています</h3>
+      <p>
+        離島の港⇄港の往復や、本州⇄北海道、九州⇄沖縄本島は道路がないため、これらの区間は直線で
+        表示されるのが正常な状態です。アプリの性質上、実際の港・乗り場そのものではなく、近くの
+        目安の地点を結んでいる場合があります。
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag green">観光地情報</span>
+      <h3>観光地の名称や場所が実際と違うようです</h3>
+      <p>
+        観光地の名称・座標は公開情報をもとに登録していますが、施設の閉鎖・名称変更・移転などにより
+        実際の情報と異なる場合があります。お気づきの点があれば、下記の連絡先までお知らせください。
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag orange">お支払い</span>
+      <h3>アプリ内課金はありますか?</h3>
+      <p>
+        「あるく日本一周」は買い切り型の有料アプリです。ダウンロード時の価格のみで、追加のアプリ内
+        課金や広告表示はありません。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>お問い合わせ</h2>
+    <div class="contact-box">
+      <p>不具合のご報告・ご質問・観光地情報の修正依頼など、お気軽にご連絡ください。</p>
+      <a class="mail" href="mailto:yilab.support@gmail.com">yilab.support@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>&copy; Yuichi Inaba</span>
+  <nav>
+    <a href="./support.html">サポート</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
+  </nav>
+</footer>
+
+</body>
+</html>

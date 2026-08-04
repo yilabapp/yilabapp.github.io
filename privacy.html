@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー | あるく日本一周</title>
+<style>
+  :root {
+    --bg: #F7F7F3;
+    --card: #FFFFFF;
+    --ink: #1C2B24;
+    --ink-soft: #4B5A53;
+    --line: #E3E4DC;
+    --route-orange: #F2994A;
+    --route-red: #D6503F;
+    --route-green: #3C8558;
+    --route-blue: #3B6EA5;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+                 "Yu Gothic", "Noto Sans JP", Roboto, Arial, sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .routebar {
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg,
+      var(--route-orange) 0%, var(--route-orange) 25%,
+      var(--route-red) 25%, var(--route-red) 50%,
+      var(--route-green) 50%, var(--route-green) 75%,
+      var(--route-blue) 75%, var(--route-blue) 100%);
+  }
+
+  header {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 28px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--route-blue);
+    text-transform: uppercase;
+    margin: 0 0 14px;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--route-blue);
+  }
+
+  h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+
+  .lead {
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    margin: 0;
+    max-width: 46em;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  .meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    border: 1px solid var(--line);
+    background: var(--card);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 28px;
+  }
+
+  .meta div strong {
+    display: block;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+
+  section {
+    margin-top: 36px;
+  }
+
+  h2 {
+    font-size: 18.5px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  h2 .num {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--ink);
+    border-radius: 999px;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+
+  .card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+  }
+
+  .card p + p {
+    margin-top: 10px;
+  }
+
+  .card ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+  }
+
+  .card li + li {
+    margin-top: 4px;
+  }
+
+  .contact-box {
+    background: var(--ink);
+    color: #F7F7F3;
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+
+  .contact-box p {
+    margin: 0 0 14px;
+    color: #C9D1CB;
+    font-size: 14.5px;
+  }
+
+  .contact-box a.mail {
+    display: inline-block;
+    background: var(--route-blue);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+  }
+
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  footer a {
+    color: var(--ink-soft);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  footer nav {
+    display: flex;
+    gap: 18px;
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 27px; }
+    header { padding: 40px 20px 22px; }
+    main { padding: 0 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="routebar" aria-hidden="true"></div>
+
+<header>
+  <p class="eyebrow">Privacy Policy</p>
+  <h1>プライバシーポリシー</h1>
+  <p class="lead">
+    「あるく日本一周」(以下「本アプリ」)における、利用者情報の取り扱いについて説明します。
+  </p>
+
+  <div class="meta">
+    <div><strong>事業者</strong>Yuichi Inaba</div>
+    <div><strong>アプリ名</strong>あるく日本一周</div>
+    <div><strong>お問い合わせ</strong>yilab.support@gmail.com</div>
+    <div><strong>制定日</strong>2026年8月4日</div>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2><span class="num">1</span>取得する情報</h2>
+    <div class="card">
+      <p>
+        本アプリは、Apple ヘルスケア(HealthKit)を通じて、利用者の歩数データを取得します。
+      </p>
+      <p>
+        取得する情報は歩数のみであり、氏名・連絡先・写真といった、利用者個人を直接特定できる情報は
+        取得しません。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span>利用目的</h2>
+    <div class="card">
+      <p>
+        取得した歩数データは、本アプリ内での「日本一周」の進行状況(地図上の移動距離・訪問済みの
+        観光地・踏破都道府県数など)を計算する目的にのみ使用します。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span>第三者への提供について</h2>
+    <div class="card">
+      <p>
+        取得した歩数データは、本アプリの外部(サーバー・第三者)へ送信・共有されることは一切
+        ありません。すべての処理は利用者の端末内でのみ行われます。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span>位置情報について</h2>
+    <div class="card">
+      <p>本アプリは、現在地(GPS)情報を取得しません。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span>データの保存・削除について</h2>
+    <div class="card">
+      <p>
+        歩数データおよび進行状況は、利用者の端末内にのみ保存されます。
+      </p>
+      <ul>
+        <li>本アプリをアンインストールすると、端末内に保存されたデータは削除されます。</li>
+        <li>アプリ内の設定画面から、進行状況をいつでもリセットできます。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">6</span>広告・課金について</h2>
+    <div class="card">
+      <p>
+        本アプリは買い切り型の有料アプリです。広告の表示、および利用者情報を用いた広告配信は
+        行っていません。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">7</span>本ポリシーの変更について</h2>
+    <div class="card">
+      <p>
+        本ポリシーの内容は、法令改正やサービス内容の変更等に応じて、予告なく変更する場合があります。
+        変更後の内容は、本ページに掲載した時点から効力を生じるものとします。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">8</span>お問い合わせ</h2>
+    <div class="contact-box">
+      <p>本ポリシーに関するお問い合わせは、以下までご連絡ください。</p>
+      <a class="mail" href="mailto:yilab.support@gmail.com">yilab.support@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>&copy; Yuichi Inaba</span>
+  <nav>
+    <a href="./support.html">サポート</a>
+    <a href="./privacy.html">プライバシーポリシー</a>
+  </nav>
+</footer>
+
+</body>
+</html>
