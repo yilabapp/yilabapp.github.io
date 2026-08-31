@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>やろっと（Yarotto ToDo）― 使い方</title>
+<style>
+  :root {
+    --gradient-top: #dceaf7;
+    --gradient-bottom: #eef4fb;
+    --accent: #5a86ac;
+    --text-primary: #2b2f36;
+    --text-secondary: #6b7280;
+    --card-bg: rgba(255,255,255,0.75);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+    color: var(--text-primary);
+    background: linear-gradient(180deg, var(--gradient-top) 0%, var(--gradient-bottom) 100%);
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  header p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin: 0;
+  }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 40px 0 14px;
+  }
+  .card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    backdrop-filter: blur(8px);
+  }
+  .card + .card { margin-top: 12px; }
+  .card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-primary);
+  }
+  ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  ul li { margin-bottom: 4px; }
+  .faq-q {
+    font-weight: 700;
+    font-size: 14.5px;
+    margin: 0 0 6px;
+  }
+  .faq-a {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .contact {
+    text-align: center;
+    margin-top: 48px;
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--card-bg);
+  }
+  .contact p { font-size: 14px; margin: 0 0 8px; }
+  .contact a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 2;
+  }
+  .footer a { color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>やろっと（Yarotto ToDo）</h1>
+    <p>ルーティン・スポット・ワークで分ける、生活のためのタスク管理アプリ</p>
+  </header>
+
+  <h2>基本の使い方</h2>
+
+  <div class="card">
+    <h3>3つの分類</h3>
+    <p>
+      画面上部のタブで「ルーティン」「スポット」「ワーク」を切り替えます。<br>
+      ・ルーティン：毎日繰り返すこと（時間帯アイコンを付けられます）<br>
+      ・スポット：単発でやること、期限があること<br>
+      ・ワーク：仕事や作業。サブタスクを付けて細かく管理できます
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>タスクの追加・編集</h3>
+    <p>
+      「追加」ボタンから新しいタスクを作成できます。スポット・ワークでは期限、メモ、サブタスクも設定可能です。
+      一覧のタスクをタップすると編集メニューが開きます。
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>並べ替え</h3>
+    <p>
+      各タスクの上下矢印で順番を入れ替えられます。スポット・ワークでは、完了したタスクは自動的に一覧の下に移動します
+      （直近に完了したものが未完了の直下、最初に完了したものが一番下）。
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>ゴミ箱</h3>
+    <p>
+      削除したタスクはすぐには消えず、30日間ゴミ箱に保管されます。ヘッダーのゴミ箱アイコンから復元、または完全に削除できます。
+      30日を過ぎたものは自動的に完全に削除されます。
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>設定でできること</h3>
+    <p>
+      外観（ライト／ダーク／端末設定に従う）、カラーテーマ（10色）、時間帯アイコンの表示切り替え、
+      文字サイズの調整、Face ID／Touch ID・パスコードによるロックを設定できます。
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>バックアップ（書き出し・読み込み）</h3>
+    <p>
+      設定画面から、タスクのデータを1つのファイルとして書き出せます。機種変更の前や、万が一に備えて保存しておくと安心です。
+      「読み込み」を行うと、バックアップ元のファイルの内容で現在のタスクがすべて置き換わります（元に戻せないため、内容をよく確認してから行ってください）。
+    </p>
+  </div>
+
+  <h2>よくある質問</h2>
+
+  <div class="card">
+    <p class="faq-q">Q. データはどこに保存されますか？</p>
+    <p class="faq-a">A. すべて端末内に保存されます。外部のサーバーには一切送信されません。</p>
+  </div>
+  <div class="card">
+    <p class="faq-q">Q. 機種変更したらデータは引き継げますか？</p>
+    <p class="faq-a">A. 設定画面の「バックアップを書き出す」で、新しい端末に移す前にデータをファイルとして保存できます。新しい端末にアプリを入れたら、「バックアップを読み込む」で保存したファイルを選んでください。</p>
+  </div>
+  <div class="card">
+    <p class="faq-q">Q. 削除したタスクはすぐに消えますか？</p>
+    <p class="faq-a">A. いいえ。ゴミ箱に30日間保管され、その間は復元できます。すぐに完全に消したい場合は、ゴミ箱からタスクを左にスワイプしてください。</p>
+  </div>
+  <div class="card">
+    <p class="faq-q">Q. ルーティンのタスクを完了しても、なぜ下に移動しないのですか？</p>
+    <p class="faq-a">A. ルーティンは毎日繰り返す前提のため、完了しても順番は変わりません。完了状況に応じて自動で並び替わるのはスポット・ワークのみです。</p>
+  </div>
+  <div class="card">
+    <p class="faq-q">Q. 全データを削除したい場合は？</p>
+    <p class="faq-a">A. 設定画面の「すべてのデータを削除」から可能です。確認画面が表示され、実行すると元に戻せません。</p>
+  </div>
+
+  <h2>免責事項</h2>
+
+  <div class="card">
+    <p style="margin-bottom:10px;">
+      本アプリは、日々のタスクを記録・整理するための道具であり、医療・心理療法の代替となるものではありません。
+      発達特性（ASD・ADHDなど）を持つ方たちにも使いやすいように配慮した設計をしていますが、診断・治療・症状の改善を目的としたものではありません。
+    </p>
+    <ul>
+      <li>体調や特性についてお悩みの場合は、医師や専門機関にご相談ください</li>
+      <li>タスクの実行・未実行、期限の管理などについて、アプリの利用によって生じた損害に対し、開発者は責任を負いかねます</li>
+      <li>データはすべて端末内にのみ保存されます。機種変更・アプリの削除・端末の故障等によりデータが失われる場合がありますので、設定画面のバックアップ機能を使い、定期的な書き出しをおすすめします</li>
+      <li>本アプリの仕様は、予告なく変更される場合があります</li>
+    </ul>
+  </div>
+
+  <div class="contact">
+    <p>ご質問・ご要望・不具合のご報告はこちらまで</p>
+    <a href="mailto:yilab.support@gmail.com">yilab.support@gmail.com</a>
+  </div>
+
+  <p class="footer">
+    <a href="privacy.html">プライバシーポリシー</a><br><br>
+    最終更新日：2026年8月30日
+  </p>
+
+</div>
+</body>
+</html>
